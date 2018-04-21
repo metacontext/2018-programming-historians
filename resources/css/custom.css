@@ -1,0 +1,145 @@
+/* ENABLE POINTER EVENTS ON SPECIAL ELEMENTS */
+
+.present a,
+.prsent a:hover,
+.present svg,
+.present svg:hover,
+.present object,
+.present object:hover,
+.present iframe,
+.present iframe:hover,
+.present .ct-container,
+.present .ct-container:hover,
+.present .swiper-container,
+.present .swiper-container:hover,
+.present .ug-gallery-wrapper,
+.present .ug-gallery-wrapper:hover,
+.ug-lightbox-button-close,
+.ug-lightbox-arrow-right,
+.ug-lightbox-arrow-left,
+button.mfp-close {
+	pointer-events: auto;
+}
+
+.swiper-container-horizontal .swiper-slide {
+	padding: 25px 0 10px 0;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+	display: flex;
+		-webkit-box-pack: left;
+		-ms-flex-pack: left;
+		-webkit-justify-content: left;
+	justify-content: left;
+		-webkit-box-align: left;
+		-ms-flex-align: left;
+		-webkit-align-items: left;
+	align-items: left;
+	overflow: auto;
+}
+
+.swiper-container-horizontal .first {
+	margin-left: 55px;
+}
+
+.swiper-container-horizontal .last {
+	margin-right: 55px;
+}
+
+.swiper-container-horizontal .swiper-pagination-bullet-active {
+	background-color: #C00000;
+}
+
+.swiper-container-horizontal .swiper-button-next {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D\'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\'%20viewBox%3D\'0%200%2027%2044\'%3E%3Cpath%20d%3D\'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z\'%20fill%3D\'%23FFFFFF\'%2F%3E%3C%2Fsvg%3E");
+	left: auto;
+	right: 0px;
+}
+
+.swiper-container-horizontal .swiper-button-prev {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D\'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\'%20viewBox%3D\'0%200%2027%2044\'%3E%3Cpath%20d%3D\'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z\'%20fill%3D\'%23FFFFFF\'%2F%3E%3C%2Fsvg%3E");
+	left: 0px;
+	right: auto;
+}
+
+.swiper-container-horizontal .swiper-button-next, .swiper-container-horizontal .swiper-button-prev {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 27px 44px;
+	cursor: pointer;
+	margin-top: 0px;
+	position: absolute;
+	top: 0;
+	width: 27px;
+	z-index: 10;
+	background-color: #87888A;
+	height: 100%;
+	padding: 0 5px;
+}
+
+.swiper-container-horizontal {
+	border: 1px solid #ECECEC !important;
+}
+
+.line-height-one-two-five {
+	line-height: 1.25;
+}
+
+.ct-slice-pie {
+	stroke: white;
+	stroke-width: 2px;
+}
+
+.ct-label {
+	fill: rgb(255,255,255);
+	font-weight: bold;
+}
+
+.ct-series-a .ct-slice-pie {
+	fill: hsl(220, 60%, 50%);
+}
+
+.ct-series-b .ct-slice-pie {
+	fill: hsl(12, 85%, 47%);
+}
+
+.legend {
+	padding-left: 4.1em;
+}
+
+.legend li {
+	display: inline;
+	list-style: none;
+	margin-right: 3em;
+}
+
+.legend li:before {
+	display: inline-block;
+	content: " ";
+	width: 1em;
+	height: 1em;
+}
+
+.legend li.age_18_24:before { background: #D70206 }
+.legend li.age_25_34:before { background: #F05B4F }
+.legend li.age_35_44:before { background: #F4C63D }
+.legend li.age_45_54:before { background: #D17905 }
+.legend li.age_55_64:before { background: #453D3F }
+
+.data_formats .ct-bar,
+.software_quality .ct-bar,
+.test_workflows .ct-bar {
+	stroke-width: 25px;
+}
+
+.software_status .ct-bar,
+.software_prestige .ct-bar,
+.job_satisfaction .ct-bar,
+.career_satisfaction .ct-bar,
+.probability_promotion .ct-bar,
+.market_value .ct-bar {
+	stroke-width: 40px;
+}

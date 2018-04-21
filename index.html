@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming Historians</title>
+
+    <!-- meta information -->
+    <meta name="author" content="Torsten Schrade" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    <!-- CSS reset and grid -->
+    <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+    <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- styles for included libraries -->
+
+    <!-- unite gallery -->
+    <link rel="stylesheet" href="vendor/unitegallery/css/unite-gallery.css" type="text/css" />
+
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- standard presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+
+    <!-- custom presentation styles -->
+    <link href="resources/css/custom.css" rel="stylesheet" />
+
+    <!-- js needed in head -->
+
+    <!-- html5 dataset shim for IE -->
+    <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="fallback-message">
+        <p>
+            Your browser <strong>doesn't support the features required</strong> by impress.mod.js,
+            so you are presented with a simplified version of this presentation.
+        </p>
+        <p>
+            For the best experience please use the latest <strong>Chrome</strong>, <strong>Safari</strong>
+            or <strong>Firefox</strong> browser.
+        </p>
+    </div>
+
+    <div id="impress">
+
+        <div class="step">
+            <h4 class="down-25"><strong>20.04.2018</strong> | <a href="http://www.isgv.de/forschungsdesign40">Forschungsdesign 4.0, Dresden</a></h4>
+
+            <h1>Programming Historians</h1>
+
+            <h2 class="red" style="font-size: 36px">Unverzichtbare Kompetenz, methodisches Plus oder nicht zwingende Eigenschaft zukünftiger HistorikerInnen?</h2>
+
+            <h5>
+                <strong>
+                    <a href="http://orcid.org/0000-0002-0953-2818">Torsten Schrade, Akademie der Wissenschaften und der Literatur &amp; Hochschule Mainz</a>
+                </strong> <br/>
+                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a>,
+                <a href="https://twitter.com/_mainzed" title="Digital Academy on Twitter">@_mainzed</a>
+                |
+                <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
+                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a> |
+                <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+            </h5>
+        </div>
+
+        <div class="step">
+            <h2>Gliederung</h2>
+            <ol class="line-height-one-five">
+                <li>
+                    <strong>Einführung und Überblick</strong> <br/> L'historien et l'ordinateur après 50 ans
+                </li>
+                <li>
+                    <strong>"Weniger schlecht programmieren"</strong> <br/> Vom einfachen Skripting zu professioneller Forschungssoftware
+                </li>
+                <li>
+                    <strong>Naming things</strong> <br/> Domain Driven Design als Modellierungsmethode in der geschichtswissenschaftlichen Softwareentwicklung
+                </li>
+                <li>
+                    <strong>Fazit</strong> <br/> Geschichtswissenschaften im Spannungsfeld zwischen Software Engineering und digitaler Quellenkritik
+                </li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h2>Fragestellungen</h2>
+            <ul class="medium line-height-one-five">
+                <li class="substep">
+                    Mit den Auswirkungen der <strong>digitalen Transformation</strong> in allen Bereichen unserer Gesellschaft unterliegen
+                    auch die Geschichtswissenschaften einem starken Wandel. Traditionelle <strong>Ausbildungswege verändern sich</strong>,
+                    klassische Forschungsfragen werden unter <strong>Einbeziehung informatischer Methoden</strong> neu gestellt.
+                </li>
+                <li class="substep">
+                    Der <strong>Aufbau digitaler Kompetenzen</strong> von Lernenden, Lehrenden und Forschenden rückt zunehmend in den Fokus.
+                </li>
+                <li class="substep">
+                    Müssen zukünftige <strong>HistorikerInnen</strong> für ihre Forschungsarbeit nun zwingend <strong>programmieren lernen</strong>?
+                    Oder wird uns diese Wahrnehmung durch die digitale Transformation "einprogrammiert"?
+                </li>
+                <li class="substep">
+                    Wo liegen die <strong>Potentiale</strong>, wo die <strong>Grenzen</strong> eines Kompetenzaufbaus für HistorikerInnen im Bereich der
+                    Softwareentwicklung und Programmierung?
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h1 class="red">01</h1>
+            <h2 class="line-height-one-five">
+                Einführung und Überblick
+            </h2>
+            <h3>L'historien et l'ordinateur après 50 ans</h3>
+        </div>
+
+        <div class="step">
+            <h2>
+               The Programming Historian
+            </h2>
+            <h3 class="red up-25">
+               Kollaborative Lernplattform für HistorikerInnen (2008 - 2018)
+            </h3>
+            <blockquote class="justify" style="font-size: 30px;">
+                "In 2008, William J. Turkel and Alan MacEachern introduced the project to the world by writing a series
+                of tutorials <strong>aimed at everyday working historians looking to build their technical skills</strong>. [...]
+                A decade on, and the project has attracted more than <strong>1.3-million visitors</strong>, has included
+                a <strong>team of 24 different scholars in 6 countries</strong>. Contributions have come from <strong>63
+                authors and 97 different peer reviewers</strong> who have published <strong>102 tutorials in 2 languages</strong>.
+                Each of those tutorials is about the length of a journal article, making the project a <strong>substantial
+                piece of collective writing</strong>.
+                <a class="red small" href="http://niche-canada.org/2018/03/23/a-decade-of-programming-historians/">
+                    Adam Crymble, A Decade of Programming Historians, 23.03.2018
+                </a>
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h2 class="down-50">
+               The Programming Historian
+            </h2>
+            <h3 class="red up-25">
+               Kollaborative Lernplattform für HistorikerInnen (2008 - 2018)
+            </h3>
+            <div class="row">
+                <div class="seven columns box" style="height: 600px;">
+                    <img src="resources/img/ph_landingpage.png" style="border: 1px solid black;" />
+                </div>
+                <div class="five columns">
+                    <p class="small" style="margin-top: -10px;">
+                        <strong>The Programming Historian ...</strong>
+                    </p>
+                    <ul class="small line-height-one-two-five">
+                        <li>
+                            ... is committed to open source values.
+                        </li>
+                        <li>
+                            ... is committed to diversity
+                        </li>
+                        <li>
+                            ... is a volunteer-driven project.
+                        </li>
+                        <li>
+                            All submissions [...] are published under a
+                            Creative Commons ‘BY’ license.
+                        </li>
+                    </ul>
+                    <p class="small">
+                        "We do not solicit reviews to judge whether a tutorial is 'good enough'
+                        to be published. Rather, we consider the review process an integral component
+                        of a collaborative, productive, and sustainable effort for scholars to teach
+                        and learn from each other."
+                    </p>
+                    <p class="x-small">
+                        <a href="https://programminghistorian.org/">
+                            The Programming Historian (ISSN: 2397-2068), <br/> URL: https://programminghistorian.org/,
+                        </a>
+                        <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2 class="up-100">
+               The Programming Historian
+            </h2>
+            <h3 class="red up-25">
+               Überblick und Analyse des Tutorienangebotes
+            </h3>
+            <div class="row">
+                <div class="seven columns box">
+                    <img src="resources/img/ph_lessons.png" style="border: 1px solid black; padding-bottom: 20px; height: 600px;" />
+                </div>
+                <div class="five columns box" style="margin-left: 600px; width: 500px">
+                    <ul class="line-height-one-two-five medium">
+                        <li class="substep">
+                            Ein Schwerpunkt liegt (immer noch) in der Datengenerierung, -verarbeitung und
+                            -transformation mit Python
+                        </li>
+                        <li class="substep">
+                            Mehrere neuere Bereiche der Digital Humanities, die auch von besonderem Interesse
+                            für die Geschichtswissenschaften sind, werden abgedeckt (bspw. Netzwerkanalyse, Linked
+                            Data), andere fehlen noch (bspw. Machine Learning)
+                        </li>
+                        <li class="substep">
+                            Kein direkter Fokus auf Software Engineering, eher auf Skripting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>
+               The Programming Historian
+            </h2>
+            <h3 class="red up-25">
+               Einschätzungen aus der Community
+            </h3>
+            <blockquote class="justify" style="font-size: 30px;">
+                "The Programming Historian is currently <strong>the best one-stop-shop for technical skill-building in the digital humanities</strong>.
+                But this comes with a caveat: it is heavily slanted towards a particular kind of technical skill-building,
+                one bound up within a tradition of humanities computing and tech culture. [...]
+                [It] <strong>can feel daunting for people who are not already familiar with humanities computing or tech culture</strong>. [...]
+                Lesson titles such as 'Transliterating non-ASCII Characters with Python', 'Supervised Classification with a Naive Bayesian',
+                or even the tutorial I followed for this review, 'Sustainable Authorship in Plain Text Using Pandoc and Markdown',
+                <strong>assume an existing familiarity with what all those words mean and how they might help you</strong>.
+                ASCII, Python, Bayesian, Pandoc, Markdown: these are part of an insider vocabulary."
+                <a class="red small" href="https://jitp.commons.gc.cuny.edu/review-of-the-programming-historian/">Cameron Blevins, Review of The Programming Historian, 2015</a>
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h2>
+               »Der Historiker von morgen wird Programmierer sein oder es wird ihn nicht mehr geben«
+            </h2>
+            <p class="small">
+                Zitat aus dem
+                <a href="https://dguw.hypotheses.org/98#comment-10">Blogpost von Mareike König, 03.04.2015</a> zur
+                Kontextualisierung des Beitrags „L’historien et l’ordinateur“ des französischen Mediävisten
+                <a href="https://de.wikipedia.org/wiki/Emmanuel_Le_Roy_Ladurie" title="En France aussi, un pronostic s’impose, en ce qui concerne l’histoire quantitative telle qu‘elle sera pratiquée dans les années 1980: dans ce domaine au moins, l’historien de demain sera programmeur ou il ne sera plus“">Emmanuel Le
+                Roy Ladurie</a> von 1968
+            </p>
+            <div class="substep">
+                <h3>Aus den Kommentaren</h3>
+                <blockquote class="justify" style="font-size: 20px; margin-bottom: 20px;">
+                    "Was insgesamt nicht schaden könnte, statt generell über Historiker und Programmieren zu diskutieren,
+                    ist vielleicht eine <strong>sinnvolle Kenntnis von Methodik zu entwickeln</strong>. Sinn macht Programmieren ja erst,
+                    wenn man entweder eine eindeutig datengetriebene Frage hat, oder eine Frage so formulieren kann,
+                    dass man sie datengetrieben bearbeiten kann."
+                    <a class="x-small" href="https://dguw.hypotheses.org/98#comment-10">Kommentar von Daniel Stange, 06.04.2015</a>
+                </blockquote>
+            </div>
+            <blockquote class="substep ustify" style="font-size: 20px; margin-bottom: 20px;">
+                "<strong>Die Frage ist für mich, was verloren geht</strong>, wenn man das Curriculum von Historikern mit Statistik,
+                Programmierkursen etc. vollpackt."
+                <a class="x-small" href="https://dguw.hypotheses.org/98#comment-12">Kommentar von Eckhart Arnold, 07.04.2015</a>
+            </blockquote>
+            <blockquote class="substep justify" style="font-size: 20px;">
+                "Ohne diese <strong>'code literacy'</strong> wird man nicht Tools nicht ausreichend verstehen und methodisch kritisch
+                hinterfragen können, um sie anschließend anwenden zu können"
+                <a class="x-small" href="https://dguw.hypotheses.org/98#comment-15">Kommentar von Mareike König, 10.04.2015</a>
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h2>
+               Programming Historians
+            </h2>
+            <h3 class="red up-25">
+               Transfer und Effizienzsteigerung
+            </h3>
+            <blockquote class="justify" style="font-size: 30px;">
+                "One of the ways historians can learn more about the digital environment is through programming.
+                [...] learning
+                how to code is fun, as it helps us develop the ability to think outside of the box and to build logical
+                connections. <strong>I wouldn’t ask everyone to become a programmer, but rather to foster computational thinking</strong>.
+                [...] Historians could read sources in a foreign language using a translator, but need to know the
+                specifics of the relevant syntax to fully understand the content, right? It is the same logic for coding.
+                <strong>If we understand the structure of the internet, the nature of the programs we use</strong>, the values behind a
+                software and the various ways to verify the information on the internet, <strong>we could handle the provided
+                resources more effectively</strong>."<br/>
+                <a class="small" href="https://doinghistoryinpublic.org/2014/07/03/why-historians-should-learn-how-to-code/">Janine Noack, Why historians should learn how to code (at least a bit), 2015</a>
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h2>
+               Programming Historians
+            </h2>
+            <h3 class="red up-25">
+               Erweiterung des Methodenrepertoires, Unabhängigkeit
+            </h3>
+            <blockquote class="justify" style="font-size: 30px;">
+                "Historians are very thorough when it comes to the integrity of their sources, so it seems logical that
+                they should apply the same rigorous approach to an algorithm that decides what sources are the most visible,
+                or appear at all. [...] <strong>there probably isn’t a program out there that does exactly what you want it to do</strong>,
+                this is where programming comes in. <strong>Programming allows you to create the program</strong> or add-on that will enable
+                you to manipulate the data in the way you want to. [...] The biggest reason why we do not see programming
+                used more widely is that it is difficult to learn, and can be very <strong>time consuming</strong>. Also of concern is <strong>which
+                language is worth spending the time</strong> and effort to learn."<br/>
+                <a class="small" href="https://malthehistorian.wordpress.com/2015/04/27/how-can-programming-be-useful-for-historians/">
+                    mal1661, How can Programming be Useful for Historians?, 27.04.2015
+                </a>
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h2 class="down-25">
+               Programming Historians
+            </h2>
+            <h3 class="red up-25">
+               Programmieren als Kulturtechnik
+            </h3>
+            <blockquote class="justify" style="font-size: 30px;">
+                "[...] beide Kompetenzen,
+                <strong>die klassische Quellenkritik ebenso wie eine adäquate Medienkompetenz</strong> [sind] im Kurrikulum der Geschichts- wissenschaften
+                existentiell bedroht bzw. <strong>hochgradig unterrepräsentiert</strong>. [...] von Programmcode ganz zu schweigen, der in
+                manchen Teilen der Wissenschaft – auch jenseits seiner funktionellen Eigenschaft als <strong>source code</strong>
+                – <strong>längst zur historischen Quelle geworden ist</strong>. [...] Denn so wie die Kodikologie, die Diplomatik, die
+                Numismatik und die Sphragistik nie ohne den Sachverstand der Kunstgeschichte, Mediävistik, Altertumskunde,
+                Physik oder Chemie auskommen konnten, so wenig wird die Geschichtswissenschaft in Zukunft ohne den <strong>intensiven
+                Austausch</strong> [...] – zwischen Informatik, den Philologien, der Medientheorie und der Philosophie und ihrer
+                digitalen Expertise bestehen."<br/>
+                <span class="small" style="display: block; line-height: 1.2; margin-top: 10px; text-align: left;">Forum: Markus Krajewski: Programmieren als Kulturtechnik, in: H-Soz-Kult, 30.11.2015, <a href="http://www.hsozkult.de/debate/id/diskussionen-2901">&lt;www.http://www.hsozkult.de/debate/id/diskussionen-2901&gt;</a></span>
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+                "Weniger schlecht programmieren"
+            </h2>
+            <h3>Vom einfachen Skripting zu professioneller Forschungssoftware</h3>
+        </div>
+
+        <div class="step">
+            <div style="position: absolute; top: -390px">
+                <h2 class="down-25">Research Software Engineering</h2>
+                <h3 class="red up-25">Von Programmierkompetenzen zu Forschungssoftware</h3>
+            </div>
+            <div class="row">
+                <div class="six columns box" style="position: absolute; top: -230px; height: 600px;">
+                    <img src="resources/img/dhd2018cloud.png" alt="Wordcloud der vergebenen Topics der DHd 2018" />
+                    <p class="x-small" style="position: absolute; bottom: 0;">
+                        Quelle: Ulrike Henny-Krahmer, Patrick Sahle, Einreichungen zur DHd 2018, URL:
+                        <a href="http://dhd-blog.org/?p=9001">http://dhd-blog.org/?p=9001</a>
+                    </p>
+                </div>
+                <div class="six columns box substep" style="position: absolute; top: -230px; right: 0; height: 600px;">
+                    <img src="resources/img/dh-rse-software.png" alt="Wordcloud der vergebenen Topics der DHd 2018" style="position: relative; left: -40px; width: 640px; height: 500px;" />
+                    <p class="x-small" style="position: absolute; bottom: 0;">
+                        Quelle: Stephan Janosch, Keynote zum DH RSE Workshop auf der DHd 2018, URL:
+                        <a href="https://figshare.com/articles/Bessere_Software_Bessere_Wissenschaft_Keynote_zum_RSE_Workshop_auf_DHd2018/5928415">Figshare</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2 class="down-50">Research Software Engineering</h2>
+            <h3 class="red up-25">Studienfach - Abschluss - Arbeitsort</h3>
+            <div class="row">
+                <div class="ten columns box" style="height: 600px;">
+                    <a href="resources/svg/discipline_degree_institution.svg">
+                        <img src="resources/svg/discipline_degree_institution.svg" alt="Fach - Abschluss - Arbeitsort" />
+                    </a>
+                </div>
+            </div>
+            <p style="font-size: 12px; margin-top: 10px;">
+                Quelle: Stephan Druskat, Alexander Czmiel und Torsten Schrade: Slides des Workshops "Research Software
+                Engineering und Digital Humanities. Reflexion, Kartierung, Organisation", DHd 2018, Köln, 27.02.2018,
+                URL: <a href="https://dh-rse.github.io/dhd-workshop-2018-presentation/">https://dh-rse.github.io/dhd-workshop-2018-presentation/</a>.
+            </p>
+        </div>
+
+        <div class="step">
+            <h2 class="down-25">Research Software</h2>
+            <h3 class="red up-25">Studienfach - Jobtitel - Arbeitsfelder</h3>
+            <div class="row up-100">
+                <div class="ten columns box" style="height: 650px;">
+                    <a href="resources/svg/discipline_jobtitle_work_areas.svg">
+                        <img src="resources/svg/discipline_jobtitle_work_areas.svg" alt="Fach - Abschluss - Arbeitsort" />
+                    </a>
+                </div>
+            </div>
+            <p style="font-size: 12px; position: relative; top: 15px; width: 500px;">
+                Quelle: Stephan Druskat, Alexander Czmiel und Torsten Schrade: Slides des Workshops "Research Software
+                Engineering und Digital Humanities. Reflexion, Kartierung, Organisation", DHd 2018, Köln, 27.02.2018,
+                URL: <a href="https://dh-rse.github.io/dhd-workshop-2018-presentation/">https://dh-rse.github.io/dhd-workshop-2018-presentation/</a>.
+            </p>
+        </div>
+
+        <div class="step">
+            <h2 class="down-75">Research Software Engineering</h2>
+            <h3 class="red up-25">Kompetenzerwerb - Erfahrung - Professionalität</h3>
+            <div class="row down-25">
+                <div class="ten columns box" style="height: 600px;">
+                    <a href="resources/svg/learning_experience_professionality.svg">
+                        <img src="resources/svg/learning_experience_professionality.svg" alt="Kompetenzerwerb - Erfahrung - Professionalität" />
+                    </a>
+                </div>
+            </div>
+            <p style="font-size: 12px; position: relative; top: -20px;">
+                Quelle: Stephan Druskat, Alexander Czmiel und Torsten Schrade: Slides des Workshops "Research Software
+                Engineering und Digital Humanities. Reflexion, Kartierung, Organisation", DHd 2018, Köln, 27.02.2018,
+                URL: <a href="https://dh-rse.github.io/dhd-workshop-2018-presentation/">https://dh-rse.github.io/dhd-workshop-2018-presentation/</a>.
+            </p>
+        </div>
+
+        <div class="step">
+            <h2 class="down-50">Research Software Engineering</h2>
+            <h3 class="red up-25 after-25">Problemstellungen, für die wir ein Grundverständis benötigen</h3>
+            <div class="row">
+                <div class="nine columns">
+                    <ul class="small line-height-one-two-five">
+                        <li>
+                            <strong>Ausgelaufene Projektfinanzierungen</strong> bedingen, dass der Weiterbetrieb
+                            einer Software "irgendwie anders" aufrecht erhalten werden muss
+                        </li>
+                        <li>
+                            EntwicklerInnen stehen einem Projekt nicht mehr zur Verfügung, waren aber
+                            die ausschließlichen <strong>Wissensträger</strong> (sog. Busfaktor...)
+                        </li>
+                        <li>
+                            <strong>Veraltete</strong> und/oder nicht mehr wartbare <strong>Software-Infrastruktur</strong>
+                            (mit implizitem, undokumentierten "Infrastrukturwissen")
+                        </li>
+                        <li>
+                            Veralteter oder <strong>unverständlicher Programmcode</strong>, der weitergeführt werden muss
+                        </li>
+                        <li>
+                            <strong>Sicherheitslücken</strong> in der Software, die erst im Produktivbetrieb auffallen
+                            und einen Weiterbetrieb der Software verhindern
+                        </li>
+                        <li>
+                            <strong>Bugs in der Software</strong>, die erst im Produktivbetrieb auffallen, da vorher
+                            keine Softwaretests durchgeführt wurden
+                        </li>
+                        <li>
+                            <strong>Datenverluste oder unerwartetes Verhalten der Software</strong>, da die Anwendung nicht
+                            unter Produktiv-Bedingungen (infrastrukturell gesehen) entwickelt wurde
+                        </li>
+                        <li>
+                            <strong>Fehlendes Monitoring</strong> der Forschungssoftware, wodurch Störfälle
+                            nicht oder erst spät auffallen
+                        </li>
+                    </ul>
+                </div>
+                <div class="three columns">
+                    <img src="resources/img/broken-car.jpeg" />
+                    <img src="resources/img/broken-ship.jpeg" />
+                    <img src="resources/img/broken-airplane.jpeg" />
+                </div>
+            </div>
+
+            <p style="font-size: 12px; position: relative; top: 0;">
+                Quelle: Torsten Schrade: Nachhaltige Softwareentwicklung in den Digital Humanities, DHd 2017, Bern, 17.02.2018,
+                URL: <a href="https://digicademy.github.io/2017-dhd-sustainable-software">https://digicademy.github.io/2017-dhd-sustainable-software</a>.
+            </p>
+
+        </div>
+
+        <div class="step">
+            <h2>Research Software Engineering</h2>
+            <h3 class="red up-25 after-25">Notwendige Professionalisierung und akademische Leistung</h3>
+            <div class="row">
+                <div class="four columns" style="margin-top: 10px;">
+                    <a href="http://repository.jisc.ac.uk/6332/1/Research_Software_Sustainability_Report_on_KE_Workshop_Feb_2016_FINAL.pdf" title="PDF aufrufen">
+                        <img class="outline" style="width: 86%" src="resources/img/Research_Software_Sustainability_Cover.png" title="Simon Hettrick: Research Software Sustainability. Report on a Knowledge Exchange Workshop.">
+                    </a>
+                </div>
+                <div class="eight columns">
+                    <h5>PDF: <a href="http://repository.jisc.ac.uk/6332/1/Research_Software_Sustainability_Report_on_KE_Workshop_Feb_2016_FINAL.pdf">http://bit.ly/23jxw7D</a></h5>
+                    <blockquote class="substep small">
+                        "Many researchers know how to code, but <strong>few understand
+                        the wider set of skills that are needed to develop reliable,
+                        reproducible and reusable software</strong>. [...] software
+                        engineering should be incorporated [...]
+                        at the very start of a research career"
+                        <cite>[S.14]</cite>
+                    </blockquote>
+                    <blockquote class="substep small" style="margin-top: 1em;">
+                        "We must <strong>raise awareness of the fundamental role of software
+                        in research</strong> [...] All stakeholders, from researchers to policymakers,
+                        must be included in this awareness raising campaign"
+                        <cite>[S.11]</cite>
+                    </blockquote>
+                    <blockquote class="substep small" style="margin-top: 1em;">
+                        "Research software should be recognised as a
+                        valuable research object in line with the investment
+                        it receives and the research it makes possible [...]
+                        <strong>Research software should become a citable
+                        scientific deliverable</strong> of equivalent value to
+                        researchers as that of a publication"
+                        <cite>[S.11]</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                Naming things
+            </h2>
+            <h3>Domain Driven Design als Modellierungsmethode in der geschichtswissenschaftlichen Softwareentwicklung</h3>
+        </div>
+
+        <div class="step">
+            <h2 class="line-height-one-five">
+                There are only two hard things in Computer Science: cache invalidation and naming things.
+            </h2>
+            <h3>-- (wahrscheinlich) Phil Karlton (Netscape)</h3>
+        </div>
+
+        <div class="step">
+            <h2>Research Software Engineering</h2>
+            <h4 class="red up-25">Vom historischen Objekt her gedacht am Beispiel einiger Akademieprojekte</h4>
+            <div id="researchdata" style="display:none;">
+                <a href="http://www.regesta-imperii.de/id/0797-03-31_1_0_1_1_0_920_336">
+                    <img alt="Geschichte: Urkunde Karls des Großen von 797"
+                         src="resources/img/forschungsdaten_thumbs_ri.png"
+                         data-image="resources/img/forschungsdaten_ri.jpg"
+                         data-description="Gemeinfrei. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/b/b1/Dipl%C3%B4me_de_Charlemagne_donn%C3%A9_le_31_mars_797._-_Archives_Nationales_-_AE-II-42.jpg"
+                         style="display:none">
+                </a>
+
+                <a href="http://id.corpusvitrearum.de/images/3515">
+                    <img alt="Kunstgeschichte: Glasmalerei"
+                         src="resources/img/forschungsdaten_thumbs_cvma.png"
+                         data-image="resources/img/forschungsdaten_cvma.jpg"
+                         data-description="Rüdiger Tonojan, CVMA Deutschland/Freiburg, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
+                         style="display:none">
+                </a>
+
+                <a href="http://nbn-resolving.de/urn:nbn:de:0238-di002mz00k0001208">
+                    <img alt="Epigraphik: Inschrift auf dem Mainzer Domportal"
+                         src="resources/img/forschungsdaten_thumbs_inschriften.png"
+                         data-image="resources/img/forschungsdaten_inschriften.jpg"
+                         data-description="Von Benutzer:Moguntiner - Dieses Foto wurde im Mai 2005 von Benutzer:Moguntiner aufgenommen und ist eine verbesserte Version des Bildes vom 21.03.05, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=23986757"
+                         style="display:none">
+                </a>
+
+                <a href="http://www.controversia-et-confessio.de/cc-digital.html">
+                    <img alt="Theologie: Religiöse Streitschriften"
+                         src="resources/img/forschungsdaten_thumbs_controversia.png"
+                         data-image="resources/img/forschungsdaten_controversia.jpg"
+                         data-description="Gemeinfrei. Wikimedia Commons. Eber-Epitaph in der Stadtkirche Wittenberg, gemalt von Lucas Cranach d. J. https://commons.wikimedia.org/wiki/File:Weinberg-WB-1569.jpg"
+                         style="display:none">
+                </a>
+
+                <a href="http://www.gluck-gesamtausgabe.de/id/1-38-00-0">
+                    <img alt="Musik: Autograph aus Glucks Oper Alceste"
+                         src="resources/img/forschungsdaten_thumbs_gluck.png"
+                         data-image="resources/img/forschungsdaten_gluck.jpg"
+                         data-description="Gemeinfrei. Wikimedia Commons. https://de.wikipedia.org/wiki/Christoph_Willibald_Gluck#/media/File:Christoph_Willibald_Gluck_-_Misero_e_che_far%C3%B2_from_Alceste._%28BL_Zweig_MS_34_f._1r%29.jpg"
+                         style="display:none">
+                </a>
+
+                <a href="http://www.namenforschung.net/id/name/30/1">
+                    <img alt="Linguistik: Kartierte Verteilung des Namens 'Meier'"
+                         src="resources/img/forschungsdaten_thumbs_dfd.png"
+                         data-image="resources/img/forschungsdaten_dfd.jpg"
+                         data-description="Namenforschung.Net"
+                         style="display:none">
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2 class="down-25">Methodenbeispiel</h2>
+            <h3 class="red up-25 after-25">Softwaremodellierung mittels Domain Driven Design (DDD)</h3>
+            <div class="row mfp-lightbox">
+                <div class="nine columns">
+                    <ul class="small line-height-one-five">
+                        <li class="substep">
+                            Domain-Driven Design (DDD) ist eine <strong>konzeptionelle Herangehens- und Denkweise für die
+                            Modellierung von Software</strong>. Der Ansatz wurde 2003 von Eric Evans in seinem gleichnamigen Buch
+                            geprägt. Das Hauptaugenmerk in DDD fällt dabei auf die <strong>Einführung einer ubiquitären (allgemein
+                            verständlichen) Sprache</strong>, die auf allen Stufen der Softwareentwicklung - von den Konzeptionsgesprächen
+                            bis hin auf die Code-Ebene - verwendet werden sollte.
+                        </li>
+                         <li class="substep">
+                            DDD legt besonders großen Wert auf die <strong>Fachlichkeit einer Anwendungsdomäne</strong>,
+                            die mittels der ubiquitären Sprache abgebildet werden soll. Daher steht die <strong>Kommunikation
+                            zwischen SoftwareentwicklerInnen und DomänenexpertInnen</strong> im Zentrum der Methode.
+                            Ein <strong>Domänenmodell</strong> basiert auf Objekten, die für die einzelnen Bestandteile der zu modellierenden
+                            Fachdomäne stehen und unterschiedliche Eigenschaften haben.
+                         </li>
+                         <li class="substep">
+                            Durch <strong>regelmäßige Iterationen</strong> nach dem DDD-Prinzip kann sich die Software
+                            kontinuierlich mit der sich stetig wandelnden Projektrealität verändern. Die Codebasis bleibt dabei
+                            im Einklang mit der Konzeptions- bzw. Modellierungsebene.
+                         </li>
+                    </ul>
+                </div>
+                <div class="three columns">
+                    <img src="resources/img/ddd-evans.png" />
+                    <p class="x-small">
+                        Eric J. Evans, Domain Driven Design. Tackling Complexity in the Heart of Software. Boston 2003.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Domain Driven Design</h2>
+            <h3 class="red up-25 after-25">Am Beispiel des Cultural Heritage Frameworks (CHF)</h3>
+            <div class="row">
+                <div class="ten columns mfp-lightbox box" style="height: 600px;">
+                    <a href="resources/img/chf_core_large.png">
+                        <img src="resources/img/chf_core.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Domain Driven Design</h2>
+            <h3 class="red up-25 after-25">Am Beispiel des Cultural Heritage Frameworks (CHF)</h3>
+            <div class="row">
+                <div class="ten columns mfp-lightbox box" style="height: 600px;">
+                    <a href="resources/img/chf_base_large.png">
+                        <img src="resources/img/chf_base.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Domain Driven Design</h2>
+            <h3 class="red up-25 after-25">Am Beispiel des Cultural Heritage Frameworks (CHF)</h3>
+            <div class="row">
+                <div class="ten columns mfp-lightbox box" style="height: 600px;">
+                    <a href="resources/img/chf_structures_large.png">
+                        <img src="resources/img/chf_structures.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Domain Driven Design</h2>
+            <h3 class="red up-25 after-25">Am Beispiel des Cultural Heritage Frameworks (CHF)</h3>
+            <div class="row">
+                <div class="ten columns mfp-lightbox box" style="height: 600px;">
+                    <a href="resources/img/chf_services_large.png">
+                        <img src="resources/img/chf_services.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Domain Driven Design</h2>
+            <h3 class="red up-25 after-25">Am Beispiel des Cultural Heritage Frameworks (CHF)</h3>
+            <div class="row">
+                <div class="ten columns mfp-lightbox box" style="height: 600px;">
+                    <a href="resources/img/chf_customizations.png">
+                        <img src="resources/img/chf_customizations.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Domain Driven Design</h2>
+            <h4 class="red up-25">Implementierungsbeispiele</h4>
+            <div class="row">
+                <div class="four columns">
+                    <div class="mfp-lightbox">
+                        <a href="resources/img/onlineapp-ri.png">
+                            <img src="resources/img/onlineapp-ri.png" />
+                        </a>
+                    </div>
+                    <p class="centered x-small">
+                        <a href="http://www.regesta-imperii.de/">www.regesta-imperii.de</a>
+                    </p>
+                </div>
+                <div class="four columns">
+                    <div class="mfp-lightbox">
+                        <a href="resources/img/onlineapp-cvma.png">
+                            <img src="resources/img/onlineapp-cvma.png" />
+                        </a>
+                    </div>
+                    <p class="centered x-small">
+                        <a href="http://www.corpusvitrearum.de/">www.corpusvitrearum.de</a>
+                    </p>
+                </div>
+                <div class="four columns">
+                    <div class="mfp-lightbox">
+                        <a href="resources/img/onlineapp-di.png">
+                            <img src="resources/img/onlineapp-di.png" />
+                        </a>
+                    </div>
+                    <p class="centered x-small">
+                        <a href="http://www.inschriften.net/">www.inschriften.net</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="four columns">
+                    <div class="mfp-lightbox">
+                        <a href="resources/img/onlineapp-cc.png">
+                            <img src="resources/img/onlineapp-cc.png" />
+                        </a>
+                    </div>
+                    <p class="centered x-small">
+                        <a href="http://www.controversia-et-confessio.de/">www.controversia-et-confessio.de</a>
+                    </p>
+                </div>
+                <div class="four columns">
+                    <div class="mfp-lightbox">
+                        <a href="resources/img/onlineapp-gluck.png">
+                            <img src="resources/img/onlineapp-gluck.png" />
+                        </a>
+                    </div>
+                    <p class="centered x-small">
+                        <a href="http://www.gluck-gesamtausgabe.de/">www.gluck-gesamtausgabe.de</a>
+                    </p>
+                </div>
+                <div class="four columns">
+                    <div class="mfp-lightbox">
+                        <a href="resources/img/onlineapp-dfd.png">
+                            <img src="resources/img/onlineapp-dfd.png" />
+                        </a>
+                    </div>
+                    <p class="centered x-small">
+                        <a href="http://www.namenforschung.net/">www.namenforschung.net</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h1 class="red">04</h1>
+            <h2 class="line-height-one-five">
+                Fazit
+            </h2>
+            <h3>Geschichtswissenschaften im Spannungsfeld zwischen Software Engineering und digitaler Quellenkritik</h3>
+        </div>
+
+        <div class="step">
+            <h2 class="down-25">Programming Historians</h2>
+            <h3 class="red up-25 after-25">Kompetenzfelder jenseits von Programmierkenntnissen</h3>
+            <div class="row">
+                <div class="nine columns mfp-lightbox box" style="height: 600px;">
+                    <a href="resources/img/programming-historian.png">
+                        <img src="resources/img/programming-historian.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2 class="down-25">Fazit</h2>
+            <h3 class="red up-25">Programming Historians im Spannungsfeld von Software Engineering und digitaler Quellenkritik</h3>
+            <ul class="small line-height-one-two-five">
+                <li class="substep">
+                    Source Code kann schon heute als <strong>historische Quelle</strong> betrachtet werden und wird als solche in Zukunft
+                    eine zunehmend große Rolle spielen. Für eine sinnvolle Auswertung dieser neuen Quellengattung müssen
+                    HistorikerInnen eine eigene <strong>code literacy</strong> aufbauen.
+                </li>
+                <li class="substep">
+                    Es geht <strong>weniger um konkrete Programmiersprachen</strong> oder bestimmte Verfahren <strong>als um
+                    computational thinking</strong> – eine Kompetenz für das Verständnis, die Analyse
+                    und die Auswertung (digitaler) Quellen.
+                </li>
+                <li class="substep">
+                    Die <strong>Zeitinvestition</strong>, die für den Aufbau entwicklerischer Kompetenzen getätigt wird, ist grundsätzlich
+                    <strong>individueller Natur</strong>. Hierin unterscheidet sich der Aufbau von Programmierkenntnissen nicht vom Aufbau
+                    spezifischer Kompetenzen im Bereich der historischen Grundwissenschaften.
+                </li>
+                <li class="substep">
+                    Gleichzeitig ist die <strong>Verankerung eines Kompetenzaufbaus im Bereich des wissenschaftlichen
+                    Software Engineerings</strong> in geschichtswissenschaftlichen Lehrplänen geboten.
+                </li>
+                <li class="substep">
+                    Hierbei geht es <strong>weniger um konkrete Implementierungen von Algorithmen als um (software-)technische Architektur-
+                    und Denkmodelle</strong>, also ein grundsätzliches Verständnis für die Zusammenhänge, die zu bestimmten
+                    Ergebnissen bei der Durchführung softwaregetriebener historischer Analysen führen.
+                </li>
+                <li class="substep">
+                    <strong>Reproduzierbarkeit, Zitierfähigkeit und Offenlegung</strong> von Software und Code, mit denen
+                    historische Forschungsergebnisse erzielt werden, sind Pflicht.
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>
+               Programming Historians
+            </h2>
+            <h3 class="red up-25">
+                Unverzichtbare Kompetenz, methodisches Plus oder nicht zwingende Eigenschaft künftiger HistorikerInnen?
+            </h3>
+            <ul class="line-height-one-two-five down-50">
+                <li class="substep">
+                    <strong>Unverzichtbar</strong> ist ein Wissen um <strong>informatische Denkmodelle, Begriffe</strong>
+                    und <strong>softwaretechnische Zusammenhänge</strong>
+                </li>
+                <li class="substep" style="margin-top: 40px;">
+                    <strong>Programmierkenntnisse</strong> sind ein <strong>methodisches Plus</strong>
+                </li>
+                <li class="substep" style="margin-top: 40px;">
+                    <strong>Nicht zwingend sind Kompetenzen in allen technischen Wissensdomänen</strong>, die mit
+                    Software Engineering zusammenhängen (z.B. Infrastruktur, Testing, Interfacedesign etc.)
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <div class="centered">
+                <h1 class="red">F I N I S</h1>
+                <h3>Vielen Dank für die Aufmerksamkeit!</h3>
+            </div>
+        </div>
+
+        <div class="step">
+
+            <h2>Links &amp; Software</h2>
+
+            <h4>Links</h4>
+
+            <ul class="small">
+                <li>
+                    <a href="https://programminghistorian.org/">The Programming Historian</a>
+                </li>
+            </ul>
+
+            <h4>Software</h4>
+
+            <ul class="small line-height-one-two-five">
+                <li>
+                    <a href="https://github.com/impress/impress.js">Impress.js</a> (Präsentation)
+                </li>
+                <li>
+                    <a href="https://jquery.com/">jQuery</a> (Animationen)
+                </li>
+                <li>
+                    <a href="https://github.com/vvvmax/unitegallery/">Unite Gallery</a> (Bildergallerien)
+                </li>
+                <li>
+                    <a href="https://github.com/dimsemenov/Magnific-Popup">Magnific Popup</a> (Lightbox)
+                </li>
+                <li>
+                    <a href="http://getskeleton.com/">Skeleton CSS</a> (CSS Boilerplate)
+                </li>
+            </ul>
+
+            <h4>Download</h4>
+
+            <ul class="small line-height-one-two-five">
+                <li> HTML Version:
+                    <a href="https://metacontext.github.io/2018-programming-historians/">
+                        https://metacontext.github.io/2018-programming-historians/
+                    </a>
+                </li>
+                <li> PDF Version:
+                    <a href="https://github.com/metacontext/2018-programming-historians/resources/pdf/programming-historians.pdf">
+                        https://github.com/metacontext/2018-programming-historians/resources/pdf/programming-historians.pdf
+                    </a>
+                </li>
+                <li> Github Repository:
+                    <a href="https://github.com/metacontext/2018-programming-historians/">
+                        https://github.com/metacontext/2018-programming-historians/
+                    </a>
+                </li>
+                <li>
+                    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Torsten Schrade
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
+    <!-- unite gallery -->
+    <script type="text/javascript" src="vendor/unitegallery/js/unitegallery.min.js"></script>
+    <script type="text/javascript" src="vendor/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+    <script type="text/javascript" src="resources/js/unite.gallery.js"></script>
+
+    <!-- magnific popup -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+    <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+    <!-- impress.mod.js -->
+    <script src="vendor/impress/impress.fork.js"></script>
+    <script src="vendor/impress/impress-slidenum.js"></script>
+    <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+
+</body>
+</html>
